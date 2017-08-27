@@ -5,7 +5,7 @@ import java.util.Collections;
 public class InsertSort {
 	
 	/**
-	 * Ö±½Ó²åÈëÅÅĞò
+	 *ç›´æ¥æ’å…¥æ’åº
 	 * @param array
 	 */
 	public static void insertSort(int[] array) {
@@ -20,7 +20,7 @@ public class InsertSort {
 	}
 	
 	/**
-	 * Ï£¶ûÅÅĞò
+	 * å¸Œå°”æ’åº
 	 * @param array
 	 */
 	public static void shellSort(int[] array) {
@@ -39,7 +39,7 @@ public class InsertSort {
 	}
 	
 	/**
-	 * Ñ¡ÔñÅÅĞò
+	 * ç®€å•é€‰æ‹©æ’åº
 	 */
 	public static void selectSort(int[] array) {
 		for(int i=0;i<array.length;i++) {
@@ -57,7 +57,7 @@ public class InsertSort {
 	}
 	
 	/**
-	 * Ã°ÅİÅÅĞò
+	 * å†’æ³¡æ’åº
 	 * @param args
 	 */
 	public static void bubbleSort(int[] array) {
@@ -73,7 +73,7 @@ public class InsertSort {
 	}
 	
 	/**
-	 * ¶ÑÅÅĞò
+	 * å †æ’åº
 	 */
 	public static void heapSort(int[] array) {
 		int size = array.length - 1;
@@ -90,10 +90,10 @@ public class InsertSort {
 	}
 	
 	/**
-	 * µ÷ÕûË÷ÒıÎª index ´¦µÄÊı¾İ£¬Ê¹Æä·ûºÏ¶ÑµÄÌØĞÔ
+	 * åˆ›å»ºindexä½ç½®çš„æœ€å¤§å † 
 	 * @param array  
-	 * @param size  Î´ÅÅĞòµÄ¶Ñ£¨Êı×é£©µÄ³¤¶È
-	 * @param position  ĞèÒª¶Ñ»¯´¦ÀíµÄÊı¾İµÄË÷Òı 
+	 * @param size  å †å¤§å°
+	 * @param index  çˆ¶èŠ‚ç‚¹
 	 */
 	public static void createMaxHeap(int[] array, int size, int index) {
 		int left = index * 2 + 1;
@@ -112,7 +112,7 @@ public class InsertSort {
 	}
 	
 	/**
-	 * ½»»»Êı×éÔªËØ
+	 * äº¤æ¢
 	 * @param array
 	 * @param i
 	 * @param j
@@ -124,11 +124,11 @@ public class InsertSort {
 	}
 	
 	/**
-	 * Êä³ö½á¹û
+	 * æ‰“å°
 	 * @param array
 	 */
 	public static void print(int[] array) {
-		System.out.print("µ±Ç°½á¹û£º");
+		System.out.print("æ’åºä¸ºï¼š");
 		for(int i : array) {
 			System.out.print(i+" ");
 		}
@@ -136,7 +136,7 @@ public class InsertSort {
 	}
 	
 	/**
-	 * ¿ìËÙÅÅĞò
+	 * å¿«é€Ÿæ’åº
 	 * @param array
 	 */
 	public static void quickSort(int[] array) {
@@ -173,7 +173,7 @@ public class InsertSort {
 	public static void main(String args[]) {
 		
 		int[] array = {23,43,43,54,12,56,55,30,40,4};
-		InsertSort.quickSort(array);
+		InsertSort.heapSort(array);
 		InsertSort.print(array);
 	}
 }

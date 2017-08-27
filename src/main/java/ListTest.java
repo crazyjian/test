@@ -67,6 +67,5 @@ public class ListTest {
 		array[size++] = 1;
 		System.out.print(size);
 		
-		
  	}
 }
