@@ -16,7 +16,6 @@ public class Test {
 		//test.run("ee");
 		Integer a = 3;
 		System.out.println(String.valueOf(a));
-		Stack
 	}
 
 }
