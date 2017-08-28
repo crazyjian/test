@@ -8,7 +8,7 @@ public class Goods implements Runnable{
 	public synchronized void put() {
 		if(own >= MAX) {
 			try {
-				System.out.println("ÎŞ·¨Éú²ú£¬²Ö¿âÒÑÂú");
+				System.out.println("ä»“åº“å·²æ»¡");
 				wait();
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
@@ -16,7 +16,7 @@ public class Goods implements Runnable{
 			}
 		} 
 			own++;
-			System.out.println("ÒÑÉú²úÒ»¸ö£¬²Ö¿â¹²ÓĞ"+own+"¸ö»õÎï");
+			System.out.println("ç”Ÿæˆä¸€ä»¶å•†å“ï¼Œä»“åº“æ€»æœ‰"+own+"ä»¶");
 			notify();
 
 	}
@@ -24,7 +24,7 @@ public class Goods implements Runnable{
 	public synchronized void get() {
 		if(own <= 0) {
 			try {
-				System.out.println("ÎŞ·¨Ïû·Ñ£¬²Ö¿â¿ÕÁË");
+				System.out.println("ä»“åº“ç©ºäº†");
 				wait();
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
@@ -32,7 +32,7 @@ public class Goods implements Runnable{
 			}
 		} 
 			own--;
-			System.out.println("ÒÑÏû·ÑÒ»¸ö£¬²Ö¿â»¹Ê£"+own+"¸ö»õÎï");
+			System.out.println("æ¶ˆè´¹ä¸€ä»¶å•†å“ï¼Œä»“åº“è¿˜å‰©"+own+"ä»¶");
 			notify();
 		
 	}
