@@ -1,24 +1,33 @@
 package com.hujian.thread;
 
 public class Counter {
-	public volatile static int count = 0;
+	public  Integer count = 0;
+	public String lock = "ss";
 	 
-    public static void inc() {
-    	//synchronized(Counter.class) {
+    public void inc() {
+    	synchronized(count) {
         //这里延迟1毫秒，使得结果明显
         try {
-            Thread.sleep(1);
+        	System.out.println("inc方法开始");
+            Thread.sleep(5000);
+            System.out.println("inc方法结束");
         } catch (InterruptedException e) {
         }
-        	count++;
-    	//}
+        	//count++;
+    	}
+    }
+    
+    public void add() {
+    	synchronized(lock) {
+            System.out.println("add方法执行");
+    	}
     }
     
     public static void main(String[] args) {
  
         //同时启动1000个线程，去进行i++计算，看看实际结果
  
-       for (int i = 0; i < 1000; i++) {
+   /*    for (int i = 0; i < 1000; i++) {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
@@ -26,9 +35,28 @@ public class Counter {
                     System.out.println("运行结果:Counter.count=" + Counter.count);
                 }
             }).start();
-        }
+        }*/
  
-        //这里每次运行的值都有可能不同,可能为1000
+    	new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				Counter c = new Counter();
+				c.inc();
+			}
+    		
+    	}).start();
     	
+    	new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				Counter c = new Counter();
+				c.add();
+			}
+    		
+    	}).start();
     }
 }

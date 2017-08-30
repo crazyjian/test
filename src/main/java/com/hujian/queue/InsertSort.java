@@ -2,6 +2,9 @@ package com.hujian.queue;
 
 import java.util.Collections;
 
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.FactoryBean;
+
 public class InsertSort {
 	
 	/**

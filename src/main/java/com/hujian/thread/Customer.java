@@ -11,10 +11,10 @@ public class Customer implements Runnable{
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		for(int i = 0;i < 20;i++){  
+		for(int i = 0;i < 10;i++){  
 			goods.get();
 			  try{  
-	                Thread.sleep((int)(Math.random()*1000));  
+	                Thread.sleep(1000);  
 	            }catch(InterruptedException e){  
 	                e.printStackTrace();  
 	            }  

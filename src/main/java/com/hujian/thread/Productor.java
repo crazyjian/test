@@ -14,7 +14,7 @@ public class Productor implements Runnable{
 		for(int i = 0;i < 20;i++){  
 			goods.put();
 			try {
-				Thread.sleep((int)(Math.random()*500));
+				Thread.sleep(800);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
