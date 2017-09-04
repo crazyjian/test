@@ -14,19 +14,19 @@ public class JabberClient {
 	        BufferedReader br = null;  
 	        PrintWriter pw = null;  
 	        try {  
-	            //¿Í»§¶ËsocketÖ¸¶¨·şÎñÆ÷µÄµØÖ·ºÍ¶Ë¿ÚºÅ  
+	            //å®¢æˆ·ç«¯socketæŒ‡å®šæœåŠ¡å™¨çš„åœ°å€å’Œç«¯å£å·  
 	        socket = new Socket("localhost", JabberServer.PORT);  
 	        System.out.println("Socket=" + socket);  
-	        //Í¬·şÎñÆ÷Ô­ÀíÒ»Ñù  
+	        //åŒæœåŠ¡å™¨åŸç†ä¸€æ ·  
 	        pw = new PrintWriter(socket.getOutputStream());  
-	      /*  pw.println("·şÎñ¶ËÄãºÃ£¬ÎÒÊÇBalla_ÍÃ×Ó");
+	      /*  pw.println("æœåŠ¡ç«¯ä½ å¥½ï¼Œæˆ‘æ˜¯Balla_å…”å­");
 	        pw.flush();
-	        socket.shutdownOutput();//¹Ø±ÕÊä³öÁ÷
+	        socket.shutdownOutput();//å…³é—­è¾“å‡ºæµ
 */	        
 	        br = new BufferedReader(new InputStreamReader(socket.getInputStream()));  
 	       /* String str = null;
 	        while((str=br.readLine())!=null) {
-	        	System.out.println("¿Í»§¶Ë½ÓÊÕ·şÎñ¶Ë·¢ËÍĞÅÏ¢£º"+str);
+	        	System.out.println("å®¢æˆ·ç«¯æ¥æ”¶æœåŠ¡ç«¯å‘é€ä¿¡æ¯ï¼š"+str);
 	        }*/
 	        for (int i = 0; i < 10; i++) {  
                 pw.println("howdy " + i);  
@@ -40,7 +40,7 @@ public class JabberClient {
 	        e.printStackTrace();  
 	    } finally {  
 	        try {  
-	            System.out.println("¿Í»§¶Ëclose");  
+	            System.out.println("å®¢æˆ·ç«¯close");  
 	            br.close();  
 	            pw.close();  
 	            socket.close();  

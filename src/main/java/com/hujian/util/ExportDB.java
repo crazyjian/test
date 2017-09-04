@@ -5,9 +5,9 @@ import org.hibernate.tool.hbm2ddl.SchemaExport;
 
 public class ExportDB {
 	 public static void main(String[]args){  
-	        //Ä¬ÈÏ¶ÁÈ¡hibernate.cfg.xmlÎÄ¼þ  
+	        //Ä¬ï¿½Ï¶ï¿½È¡hibernate.cfg.xmlï¿½Ä¼ï¿½  
 	        Configuration cfg = new Configuration().configure();  
-	        ////Éú³É²¢Êä³ösqlµ½ÎÄ¼þ£¨µ±Ç°Ä¿Â¼£©ºÍÊý¾Ý¿â  
+	        //ï¿½ï¿½É²ï¿½ï¿½ï¿½ï¿½sqlï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Ç°Ä¿Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½  
 	        SchemaExport export = new SchemaExport(cfg);  
 	        export.create(true, true);  
 	    }  
