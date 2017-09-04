@@ -2,6 +2,9 @@ package com.hujian.queue;
 
 import java.util.Collections;
 
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.FactoryBean;
+
 public class InsertSort {
 	
 	/**
@@ -169,9 +172,8 @@ public class InsertSort {
 	
 	
 
-
+	
 	public static void main(String args[]) {
-		
 		int[] array = {23,43,43,54,12,56,55,30,40,4};
 		InsertSort.heapSort(array);
 		InsertSort.print(array);

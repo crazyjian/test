@@ -17,26 +17,26 @@ public class JabberServer {
         BufferedReader br = null;  
         PrintWriter pw = null;  
         try {  
-            //Éè¶¨·şÎñ¶ËµÄ¶Ë¿ÚºÅ  
+            //è®¾å®šæœåŠ¡ç«¯çš„ç«¯å£å·  
             s = new ServerSocket(PORT);  
-            System.out.println("·şÎñ¶ËÒÑÆô¶¯£¬µÈ´ı¿Í»§¶ËÁ¬½Ó..");
-            //µÈ´ıÇëÇó,´Ë·½·¨»áÒ»Ö±×èÈû,Ö±µ½»ñµÃÇëÇó²ÅÍùÏÂ×ß  
+            System.out.println("æœåŠ¡ç«¯å·²å¯åŠ¨ï¼Œç­‰å¾…å®¢æˆ·ç«¯è¿æ¥..");
+            //ç­‰å¾…è¯·æ±‚,æ­¤æ–¹æ³•ä¼šä¸€ç›´é˜»å¡,ç›´åˆ°è·å¾—è¯·æ±‚æ‰å¾€ä¸‹èµ°  
             socket = s.accept();  
             System.out.println("Connection accept socket:"+socket);  
-            //ÓÃÓÚ½ÓÊÕ¿Í»§¶Ë·¢À´µÄÇëÇó  
+            //ç”¨äºæ¥æ”¶å®¢æˆ·ç«¯å‘æ¥çš„è¯·æ±‚  
             br = new BufferedReader(new InputStreamReader(socket.getInputStream()));  
            /* String str = null;
             while((str=br.readLine())!=null){  
-                System.out.println("ÒÑ½ÓÊÕµ½¿Í»§¶ËÁ¬½Ó");
-                System.out.println("·şÎñ¶Ë½ÓÊÕµ½¿Í»§¶ËĞÅÏ¢£º"+str+",µ±Ç°¿Í»§¶ËipÎª£º"+socket.getInetAddress().getHostAddress()); 
+                System.out.println("å·²æ¥æ”¶åˆ°å®¢æˆ·ç«¯è¿æ¥");
+                System.out.println("æœåŠ¡ç«¯æ¥æ”¶åˆ°å®¢æˆ·ç«¯ä¿¡æ¯ï¼š"+str+",å½“å‰å®¢æˆ·ç«¯ipä¸ºï¼š"+socket.getInetAddress().getHostAddress()); 
             }  
-            //ÓÃÓÚ·¢ËÍ·µ»ØĞÅÏ¢,¿ÉÒÔ²»ĞèÒª×°ÊÎÕâÃ´¶àioÁ÷Ê¹ÓÃ»º³åÁ÷Ê±·¢ËÍÊı¾İÒª×¢Òâµ÷ÓÃ.flush()·½·¨  
+            //ç”¨äºå‘é€è¿”å›ä¿¡æ¯,å¯ä»¥ä¸éœ€è¦è£…é¥°è¿™ä¹ˆå¤šioæµä½¿ç”¨ç¼“å†²æµæ—¶å‘é€æ•°æ®è¦æ³¨æ„è°ƒç”¨.flush()æ–¹æ³•  
             pw = new PrintWriter(socket.getOutputStream());  
-            pw.println("ÄãºÃ£¬·şÎñ¶ËÒÑ½ÓÊÕµ½ÄúµÄĞÅÏ¢");
+            pw.println("ä½ å¥½ï¼ŒæœåŠ¡ç«¯å·²æ¥æ”¶åˆ°æ‚¨çš„ä¿¡æ¯");
             pw.flush();  
-            socket.shutdownOutput();//¹Ø±ÕÊä³öÁ÷*/
+            socket.shutdownOutput();//å…³é—­è¾“å‡ºæµ*/
             pw = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream())),true);  
-            System.out.println("µ±Ç°¿Í»§¶ËipÎª£º"+socket.getInetAddress().getHostAddress());
+            System.out.println("å½“å‰å®¢æˆ·ç«¯ipä¸ºï¼š"+socket.getInetAddress().getHostAddress());
             while(true){  
                 String str = br.readLine();  
                 if(str.equals("END")){  
@@ -51,7 +51,7 @@ public class JabberServer {
             // TODO Auto-generated catch block  
             e.printStackTrace();  
         }finally{  
-            System.out.println("·şÎñ¶ËClose");  
+            System.out.println("æœåŠ¡ç«¯Close");  
             try {  
                 br.close();  
                 pw.close();  
