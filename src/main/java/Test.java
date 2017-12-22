@@ -12,7 +12,7 @@ public class Test {
 		// TODO Auto-generated method stub
 
 		Scanner input = new Scanner(System.in);
-		System.out.println("ÇëÊäÈëÊ±¼ä£¬¸ñÊ½Èç£¨yyyy-MM-dd£©");
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ä£¬ï¿½ï¿½Ê½ï¿½ç£¨yyyy-MM-ddï¿½ï¿½");
 		String dateString = input.next();
 		SimpleDateFormat sdf = new SimpleDateFormat("yyy-MM-dd");
 		Date date = sdf.parse(dateString);
@@ -20,6 +20,7 @@ public class Test {
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(date);
 		System.out.println(calendar.get(Calendar.DAY_OF_WEEK));
+		System.out.println("ceshi");
 	}
 
 }
